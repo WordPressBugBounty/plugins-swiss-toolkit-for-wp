@@ -12,7 +12,7 @@ require_once BDSTFW_SWISS_TOOLKIT_PATH . 'includes/class-boomdevs-swiss-toolkit-
  * Define the BDSTFW_Swiss_Toolkit_Code_Snippet for handling code snippets.
  * 
  * @package    BDSTFW_Swiss_Toolkit_Code_Snippet
- * @author     BoomDevs <contact@boomdevs.com>
+ * @author     BoomDevs <contact@wpmessiah.com>
  */
 if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
     class BDSTFW_Swiss_Toolkit_Code_Snippet

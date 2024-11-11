@@ -19,7 +19,7 @@ if (!defined('ABSPATH')) {
  * @since      1.0.0
  * @package    Boomdevs_Swiss_Toolkit
  * @subpackage Boomdevs_Swiss_Toolkit/includes
- * @author     BoomDevs <contact@boomdevs.com>
+ * @author     BoomDevs <contact@wpmessiah.com>
  */
 if (!class_exists('BDSTFW_Swiss_Toolkit')) {
 	class BDSTFW_Swiss_Toolkit
@@ -67,7 +67,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit')) {
 			if (defined('BDSTFW_SWISS_TOOLKIT_VERSION')) {
 				$this->version = BDSTFW_SWISS_TOOLKIT_VERSION;
 			} else {
-				$this->version = '1.2.0';
+				$this->version = '1.3.0';
 			}
 			$this->plugin_name = 'swiss-toolkit-for-wp';
 

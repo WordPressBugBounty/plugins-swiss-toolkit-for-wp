@@ -160,8 +160,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Settings')) {
                 'dev_mode' => false,
                 'disable_save_warn' => false,
                 'search' => false,
-                'footer_text'     => sprintf('Our WP Swiss Toolkit documentation can help you get started <a href="%s">documentation</a>', esc_url('https://boomdevs.com/docs/')),
-                'footer_credit'   => sprintf('A proud creation of <a href="%s">BoomDevs</a>', esc_url('https://boomdevs.com/')),
+                'footer_text'     => sprintf('Our WP Swiss Toolkit documentation can help you get started <a href="%s">documentation</a>', esc_url('https://wpmessiah.com/docs/')),
+                'footer_credit'   => sprintf('A proud creation of <a href="%s">BoomDevs</a>', esc_url('https://wpmessiah.com/')),
                 'page_permissions' => 'manage_options',
                 'class' => 'bdstfw_swiss_toolkit_framework',
             );
@@ -462,7 +462,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Settings')) {
                         <div class="swiss-toolkit-top-notice">
                             <h6><?php echo esc_html__('About Us', 'swiss-toolkit-for-wp') ?></h6>
                             <p class="swiss-toolkit-top-notice-content"><?php echo sprintf("We're a team of passionate WordPress developers committed to enhancing your website's functionality. Our goal is to bring innovative and user-friendly solutions to WordPress users. Explore our complete range of offering <a href='%s'>plugins</a> to learn more to empower your WordPress journey.", esc_url('https://staging53.boomdevs.com/product-category/wordpress/wordpress-plugins/')); ?></p>
-                            <p><?php echo esc_html__('Check out our website for more information:', 'swiss-toolkit-for-wp'); ?> <a href="<?php echo esc_url('https://boomdevs.com'); ?>" target="_blank"><?php echo esc_url('https://boomdevs.com'); ?></a></p>
+                            <p><?php echo esc_html__('Check out our website for more information:', 'swiss-toolkit-for-wp'); ?> <a href="<?php echo esc_url('https://wpmessiah.com'); ?>" target="_blank"><?php echo esc_url('https://wpmessiah.com'); ?></a></p>
                             <span class="swiss-toolkit-notice-close">
                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M6 12C9.31373 12 12 9.31373 12 6C12 2.68629 9.31373 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31373 2.68629 12 6 12ZM8.35353 3.64645C8.5488 3.84171 8.5488 4.15829 8.35353 4.35355L6.70713 6L8.35353 7.64647C8.5488 7.84173 8.5488 8.15827 8.35353 8.35353C8.15827 8.5488 7.84173 8.5488 7.64647 8.35353L6 6.70713L4.35355 8.35353C4.15829 8.5488 3.84171 8.5488 3.64645 8.35353C3.45119 8.15827 3.45119 7.84173 3.64645 7.64647L5.29287 6L3.64645 4.35355C3.45119 4.15829 3.45119 3.84171 3.64645 3.64645C3.84171 3.45119 4.15829 3.45119 4.35355 3.64645L6 5.29287L7.64647 3.64645C7.84173 3.45119 8.15827 3.45119 8.35353 3.64645Z" fill="#949494" />

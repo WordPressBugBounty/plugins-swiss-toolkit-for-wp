@@ -1,10 +1,10 @@
 === Swiss Toolkit For WP ===
 Plugin Name: Swiss Toolkit For WP
-Contributors: boomdevs
+Contributors: boomdevs, wpmessiah
 Tags: toolkit, increase file size limit, increase upload limit, upload limit
 Requires at least: 5.2
-Tested up to: 6.6.1
-Stable tag: 1.2.0
+Tested up to: 6.6.2
+Stable tag: 1.3.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -89,26 +89,15 @@ Ready to unlock the full potential of your WordPress experience? Elevate your we
  - Continuous Updates
  - Priority Support
 
-[Get the Pro](https://boomdevs.com/products/wp-swiss-toolkit/)
+[Get the Pro](https://wpmessiah.com/products/wp-swiss-toolkit/)
 
-[Submit Ticket](https://boomdevs.com/forums/forum/wp-swiss-toolkit/)
+[Submit Ticket](https://wpmessiah.com/forums/forum/wp-swiss-toolkit/)
 
-Made with ❣️ By [BoomDevs](https://boomdevs.com/)
-
-
-## Privacy Policy
-
-Swiss Toolkit For WP uses [Appsero](https://appsero.com/) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
-
-Appsero SDK *does not gather any data by default.* The SDK only starts gathering basic telemetry data *when a user allows it via the admin notice*. We collect the data to ensure a great user experience for all our users.
-
-Integrating Appsero SDK *DOES NOT IMMEDIATELY* start gathering data, *without confirmation from users in any case.*
-
-Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
+Made with ❣️ By [WP Messiah](https://wpmessiah.com/)
 
 == Support ==
 
-If you have any questions, please email us at **[contact@boomdevs.com](mailto:contact@boomdevs.com)**
+If you have any questions, please email us at **[contact@wpmessiah.com](mailto:contact@wpmessiah.com)**
 
 == Screenshots ==
 
@@ -124,7 +113,7 @@ There are no prerequisites for installing **Swiss Toolkit**. You can follow the 
 == Frequently Asked Questions ==
 
  = What is the WP Swiss Toolkit? =
- WP Swiss Toolkit is a powerful WordPress plugin developed by BoomDevs that offers a collection of essential features not included by default in WordPress. It simplifies various tasks for WordPress website owners and administrators, eliminating the need to install multiple separate plugins for each function.
+ WP Swiss Toolkit is a powerful WordPress plugin developed by WP Messiah that offers a collection of essential features not included by default in WordPress. It simplifies various tasks for WordPress website owners and administrators, eliminating the need to install multiple separate plugins for each function.
 
  = What features does WP Swiss Toolkit provide? =
  WP Swiss Toolkit includes a range of features, such as post duplication, avatar changes, username editing, increasing file upload size, changing the login URL address, and inserting code into the header or footer of your website.
@@ -136,9 +125,12 @@ There are no prerequisites for installing **Swiss Toolkit**. You can follow the 
  Absolutely! WP Swiss Toolkit is designed with user-friendliness in mind. Its intuitive interface and straightforward controls make it easy for both technical and non-technical individuals to manage their WordPress websites efficiently.
 
  = Is WP Swiss Toolkit compatible with other plugins? =
- WP Swiss Toolkit is designed to be compatible with most well-coded plugins. However, as with any WordPress plugin, there may be occasional conflicts with certain themes or plugins. BoomDevs actively works to address compatibility issues reported by users.
+ WP Swiss Toolkit is designed to be compatible with most well-coded plugins. However, as with any WordPress plugin, there may be occasional conflicts with certain themes or plugins. WP Messiah actively works to address compatibility issues reported by users.
 
  == Changelog ==
+
+1.3.0 - 11 November 2024
+Fix: Some Minor issues.
 
 1.2.0 - 18 Augest 2024
 Added: Database Optimization feature.

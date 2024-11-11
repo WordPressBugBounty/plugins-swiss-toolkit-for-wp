@@ -8,19 +8,19 @@
  * registers the activation and deactivation functions, and defines a function
  * that starts the plugin.
  *
- * @link              https://boomdevs.com
+ * @link              https://wpmessiah.com
  * @since             1.0.0
  * @package           Boomdevs_Swiss_Toolkit
  *
  * @wordpress-plugin
  * Plugin Name:       Swiss Toolkit For WP
- * Plugin URI:        https://boomdevs.com
+ * Plugin URI:        https://wpmessiah.com
  * Description:       Say Goodbye to Plugin Overload - WP Swiss Toolkit Has It All
- * Version:           1.2.0
+ * Version:           1.3.0
  * Requires at least: 5.2
  * Requires PHP:      7.4
- * Author:            BoomDevs
- * Author URI:        https://boomdevs.com
+ * Author:            WP Messiah
+ * Author URI:        https://wpmessiah.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       swiss-toolkit-for-wp
@@ -37,7 +37,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('BDSTFW_SWISS_TOOLKIT_VERSION', '1.2.0');
+define('BDSTFW_SWISS_TOOLKIT_VERSION', '1.3.0');
 define('BDSTFW_SWISS_TOOLKIT_PATH', plugin_dir_path(__FILE__));
 define('BDSTFW_SWISS_TOOLKIT_URL', plugin_dir_url(__FILE__));
 define('BDSTFW_SWISS_TOOLKIT_NAME', 'swiss-toolkit-for-wp');

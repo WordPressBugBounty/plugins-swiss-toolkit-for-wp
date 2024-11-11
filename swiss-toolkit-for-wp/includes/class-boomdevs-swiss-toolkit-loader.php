@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
  *
  * @package    Boomdevs_Swiss_Toolkit
  * @subpackage Boomdevs_Swiss_Toolkit/includes
- * @author     BoomDevs <contact@boomdevs.com>
+ * @author     BoomDevs <contact@wpmessiah.com>
  */
 if (!class_exists('BDSTFW_Swiss_Toolkit_Loader')) {
 	class BDSTFW_Swiss_Toolkit_Loader

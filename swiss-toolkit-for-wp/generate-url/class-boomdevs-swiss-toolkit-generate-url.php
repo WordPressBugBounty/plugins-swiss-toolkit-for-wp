@@ -231,7 +231,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Generate_URL')) {
                     array(
                         'id' => 'general_url_option_id',
                         'type' => 'raw',
-                        'content' => sprintf('To unlock Generate URL condition, <a href="%s">Upgrade To Pro!</a>', esc_url('https://boomdevs.com/product-category/wordpress/wordpress-plugins/')),
+                        'content' => sprintf('To unlock Generate URL condition, <a href="%s">Upgrade To Pro!</a>', esc_url('https://wpmessiah.com/product-category/wordpress/wordpress-plugins/')),
                     ),
                     array(
                         'id' => 'swiss_expiration_date',

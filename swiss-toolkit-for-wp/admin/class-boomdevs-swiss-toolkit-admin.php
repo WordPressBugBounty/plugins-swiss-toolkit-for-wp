@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
  *
  * @package    Boomdevs_Swiss_Toolkit
  * @subpackage Boomdevs_Swiss_Toolkit/admin
- * @author     BoomDevs <contact@boomdevs.com>
+ * @author     BoomDevs <contact@wpmessiah.com>
  */
 if (!class_exists('BDSTFW_Swiss_Toolkit_Admin')) {
 	class BDSTFW_Swiss_Toolkit_Admin

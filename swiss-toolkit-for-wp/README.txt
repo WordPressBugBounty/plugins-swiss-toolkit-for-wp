@@ -3,8 +3,8 @@ Plugin Name: Swiss Toolkit For WP
 Contributors: boomdevs, wpmessiah
 Tags: toolkit, increase file size limit, increase upload limit, upload limit
 Requires at least: 5.2
-Tested up to: 6.6.2
-Stable tag: 1.3.0
+Tested up to: 6.8
+Stable tag: 1.4.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -128,6 +128,9 @@ There are no prerequisites for installing **Swiss Toolkit**. You can follow the 
  WP Swiss Toolkit is designed to be compatible with most well-coded plugins. However, as with any WordPress plugin, there may be occasional conflicts with certain themes or plugins. WP Messiah actively works to address compatibility issues reported by users.
 
  == Changelog ==
+
+1.4.0 - 30 May 2025
+Fix: Some Minor issues.
 
 1.3.0 - 11 November 2024
 Fix: Some Minor issues.

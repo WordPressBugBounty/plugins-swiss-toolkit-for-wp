@@ -67,7 +67,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit')) {
 			if (defined('BDSTFW_SWISS_TOOLKIT_VERSION')) {
 				$this->version = BDSTFW_SWISS_TOOLKIT_VERSION;
 			} else {
-				$this->version = '1.3.0';
+				$this->version = '1.4.0';
 			}
 			$this->plugin_name = 'swiss-toolkit-for-wp';
 
@@ -107,6 +107,12 @@ if (!class_exists('BDSTFW_Swiss_Toolkit')) {
 			 * of the plugin.
 			 */
 			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-boomdevs-swiss-toolkit-i18n.php';
+
+			/**
+			 * The class responsible for defining internationalization functionality
+			 * Notification Widget
+			 */
+			require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-boomdevs-notification-widget-swiss-toolkit.php';
 
 			/**
 			 * The class responsible for defining all actions that occur in the admin area.

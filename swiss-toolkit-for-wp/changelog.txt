@@ -1,4 +1,7 @@
  == Changelog ==
+
+= 1.4.1 - 11 June 2025 =
+Fix: Admin panel loading issues
  
 1.4.0 - 30 May 2025
 Fix: Some Minor issues.

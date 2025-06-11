@@ -84,6 +84,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function post_updated_messages($messages)
         {
+            if(!current_user_can('manage_options')) return;
+
             global $post;
 
             $post_type = get_post_type($post);
@@ -182,6 +184,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function register_snippet_post_type()
         {
+            if(!current_user_can('manage_options')) return;
 
             $labels = array(
                 'name'                  => esc_html__('Code Snippets', 'Post Type General Name', 'swiss-toolkit-for-wp'),
@@ -268,6 +271,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function custom_metabox()
         {
+            if(!current_user_can('manage_options')) return;
+
             add_meta_box('code_snippet', esc_html__('Code Snippet', 'swiss-toolkit-for-wp'), [$this, 'custom_metabox_field'], 'swiss_snippets', 'normal', 'default');
             add_meta_box('enable_disable', esc_html__('Enable/Disable', 'swiss-toolkit-for-wp'), [$this, 'custom_enable_disabled_field'], 'swiss_snippets', 'side', 'default');
         }
@@ -282,6 +287,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function custom_metabox_field($post)
         {
+            if(!current_user_can('manage_options')) return;
+
             $value = get_post_meta($post->ID, 'bdstfw_code_snippets_textarea', true);
             $language = get_post_meta($post->ID, 'bdstfw_code_snippets_language', true);
             $location = get_post_meta($post->ID, 'bdstfw_code_snippets_location', true);
@@ -345,6 +352,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function custom_enable_disabled_field($post)
         {
+            if(!current_user_can('manage_options')) return;
+
             $toggle = get_post_meta($post->ID, 'bdstfw_code_snippets_toggle', true);
         ?>
             <div style="display: flex; align-items: center; gap: 20px;">
@@ -366,6 +375,8 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Code_Snippet')) {
          */
         public function swiss_snippets_save_post($post_id)
         {
+            if(!current_user_can('manage_options')) return;
+
             // Check if bdstfw_code_snippets_textarea is set in the POST data
             if (isset($_POST['code_snippets_textarea'])) {
                 // Update post meta for language, code, and location

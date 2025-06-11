@@ -44,41 +44,38 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
             }
 
             add_action( 'wp_ajax_swiss_toolkit_delete_post_revisions', [$this, 'swiss_toolkit_delete_post_revisions'] );
-            add_action( 'wp_ajax_nopriv_swiss_toolkit_delete_post_revisions', [$this, 'swiss_toolkit_delete_post_revisions'] );
 
             add_action( 'wp_ajax_swiss_toolkit_delete_post_draft', [$this, 'swiss_toolkit_delete_post_draft'] );
-            add_action( 'wp_ajax_nopriv_swiss_toolkit_delete_post_draft', [$this, 'swiss_toolkit_delete_post_draft'] );
 
             add_action( 'wp_ajax_swiss_toolkit_delete_post_trash', [$this, 'swiss_toolkit_delete_post_trash'] );
-            add_action( 'wp_ajax_nopriv_swiss_toolkit_delete_post_trash', [$this, 'swiss_toolkit_delete_post_trash'] );
 
             add_action('wp_ajax_swiss_toolkit_delete_spam_comments', [$this, 'swiss_toolkit_delete_spam_comments']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_spam_comments', [$this, 'swiss_toolkit_delete_spam_comments']);
 
             add_action('wp_ajax_swiss_toolkit_delete_trashed_comments', [$this, 'swiss_toolkit_delete_trashed_comments']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_trashed_comments', [$this, 'swiss_toolkit_delete_trashed_comments']);
 
             add_action('wp_ajax_swiss_toolkit_delete_unapproved_comments', [$this, 'swiss_toolkit_delete_unapproved_comments']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_unapproved_comments', [$this, 'swiss_toolkit_delete_unapproved_comments']);
 
             add_action('wp_ajax_swiss_toolkit_delete_orphaned_postmeta', [$this, 'swiss_toolkit_delete_orphaned_postmeta']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_orphaned_postmeta', [$this, 'swiss_toolkit_delete_orphaned_postmeta']);
 
             add_action('wp_ajax_swiss_toolkit_delete_orphaned_user_meta', [$this, 'swiss_toolkit_delete_orphaned_user_meta']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_orphaned_user_meta', [$this, 'swiss_toolkit_delete_orphaned_user_meta']);
 
             add_action('wp_ajax_swiss_toolkit_delete_orphaned_comment_meta', [$this, 'swiss_toolkit_delete_orphaned_comment_meta']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_orphaned_comment_meta', [$this, 'swiss_toolkit_delete_orphaned_comment_meta']);
 
             add_action('wp_ajax_swiss_toolkit_delete_orphaned_relationship_data', [$this, 'swiss_toolkit_delete_orphaned_relationship_data']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_orphaned_relationship_data', [$this, 'swiss_toolkit_delete_orphaned_relationship_data']);
 
             add_action('wp_ajax_swiss_toolkit_delete_pingbacks', [$this, 'swiss_toolkit_delete_pingbacks']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_pingbacks', [$this, 'swiss_toolkit_delete_pingbacks']);
 
             add_action('wp_ajax_swiss_toolkit_delete_trackbacks', [$this, 'swiss_toolkit_delete_trackbacks']);
-            add_action('wp_ajax_nopriv_swiss_toolkit_delete_trackbacks', [$this, 'swiss_toolkit_delete_trackbacks']);
 
+        }
+
+         public function check_user_capability(){
+            $user = wp_get_current_user();
+            $allowed_roles = array( 'administrator');
+
+            if( !current_user_can( 'manage_options' ) && !array_intersect( $allowed_roles, $user->roles ) ) {
+                wp_send_json_error(array('message' => 'You are not authorized to delete post drafts.'));
+            }
         }
 
         /**
@@ -306,6 +303,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
          * @return void
          */
         public function swiss_toolkit_delete_post_revisions(){
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_post_revision_nonce', 'nonce');
         
@@ -335,6 +335,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
          * @return void
          */
         public function swiss_toolkit_delete_post_draft(){
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_post_draft_nonce', 'nonce');
         
@@ -364,6 +367,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
          * @return void
          */
         public function swiss_toolkit_delete_post_trash(){
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_post_trash_nonce', 'nonce');
         
@@ -383,6 +389,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
 
         public function swiss_toolkit_delete_spam_comments() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_spam_comments_nonce', 'nonce');
         
@@ -402,6 +411,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
 
         public function swiss_toolkit_delete_trashed_comments() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_trashed_comments_nonce', 'nonce');
         
@@ -421,6 +433,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
 
         public function swiss_toolkit_delete_unapproved_comments() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_unapproved_comments_nonce', 'nonce');
         
@@ -440,6 +455,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
 
         public function get_total_orphaned_user_meta() {
+
+            $this->check_user_capability();
+
             global $wpdb;
         
             // Prepare the SQL query to count orphaned user meta entries
@@ -459,6 +477,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
 
         // Function to delete orphaned post meta data
         public function swiss_toolkit_delete_orphaned_postmeta() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_orphaned_postmeta_nonce', 'nonce');
             
@@ -483,6 +504,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
         
         public function swiss_toolkit_delete_orphaned_user_meta() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_orphaned_user_meta_nonce', 'nonce');
             
@@ -507,6 +531,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
         
         public function swiss_toolkit_delete_orphaned_comment_meta() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_orphaned_comment_meta_nonce', 'nonce');
             
@@ -531,6 +558,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
 
         public function swiss_toolkit_delete_orphaned_relationship_data() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_orphaned_relationship_data_nonce', 'nonce');
             
@@ -554,6 +584,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
         
         public function swiss_toolkit_delete_pingbacks() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_pingbacks_nonce', 'nonce');
             
@@ -576,6 +609,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
         }
         
         public function swiss_toolkit_delete_trackbacks() {
+
+            $this->check_user_capability();
+
             // Verify nonce for security
             check_ajax_referer('swiss_toolkit_delete_trackbacks_nonce', 'nonce');
             
@@ -604,6 +640,9 @@ if (!class_exists('BDSTFW_Swiss_Toolkit_Optimizations')) {
          * Display the "Optimization" message in the admin page.
          */
         public function swiss_toolkit_optimizations_callback(){
+
+            $this->check_user_capability();
+
             ?>
             <div class="wrap">
                 <h2><?php echo esc_html( __( 'Database Optimizations', 'swiss-toolkit-for-wp' ) ); ?></h2>

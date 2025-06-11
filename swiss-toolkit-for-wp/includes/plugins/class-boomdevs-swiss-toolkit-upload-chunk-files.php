@@ -71,6 +71,8 @@ if (!class_exists('BDSTFW_File_Upload_Chunk')) {
          */
         public function bdstfw_ajax_chunk_receiver()
         {
+            if(!current_user_can('manage_options')) return;
+            
             /** Check that we have an upload and there are no errors. */
             if (empty($_FILES) || $_FILES['async-upload']['error']) {
                 /** Failed to move uploaded file. */

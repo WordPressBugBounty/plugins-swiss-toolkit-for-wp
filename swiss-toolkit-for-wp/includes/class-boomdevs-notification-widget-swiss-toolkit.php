@@ -22,17 +22,20 @@ class BoomDevs_Notification_Widget_swiss_toolkit
         if ($cached_data !== false) return $cached_data;
 
         $api_url = add_query_arg('plugin_slug', $this->plugin_slug, $this->api_url);
-        $response = wp_remote_get($api_url, ['timeout' => 15, 'sslverify' => false]);
+        $response = wp_remote_get($api_url, ['timeout' => 10, 'sslverify' => true]);
 
         if (is_wp_error($response)) return ['error' => $response->get_error_message()];
         $data = json_decode(wp_remote_retrieve_body($response), true);
 
-        if (empty($data)) return ['error' => 'No data returned from API'];
-
-        set_transient($this->transient_key, $data, 12 * HOUR_IN_SECONDS);
+        if (empty($data)) {
+            set_transient($this->transient_key, [], 12 * HOUR_IN_SECONDS);
+        } else {
+            set_transient($this->transient_key, $data, 12 * HOUR_IN_SECONDS);
+        }
+        
         return $data;
     }
-
+    
     public function render_widget() {
         $data = $this->fetch_notification_data();
         if (isset($data['error']) || !is_array($data) || empty($data)) return;
@@ -87,6 +90,7 @@ class BoomDevs_Notification_Widget_swiss_toolkit
 
 
     public function on_meta_box_update($post_id, $post) {
+        if(!current_user_can('manage_options')) return;
         if (get_post_type($post_id) !== 'notification') return;
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
         delete_transient($this->transient_key);

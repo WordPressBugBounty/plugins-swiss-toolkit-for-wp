@@ -206,6 +206,7 @@ if ( ! class_exists( 'Redux_Admin_Notices', false ) ) {
 		 * @return      void
 		 */
 		public function ajax() {
+			if(!current_user_can('manage_options')) return;
 			global $current_user;
 
 			if ( isset( $_POST['id'] ) ) {

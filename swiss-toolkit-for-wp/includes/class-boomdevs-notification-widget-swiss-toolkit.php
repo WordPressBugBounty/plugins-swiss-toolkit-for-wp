@@ -38,24 +38,21 @@ class BoomDevs_Notification_Widget_swiss_toolkit
     
     public function render_widget() {
         $data = $this->fetch_notification_data();
-        if (isset($data['error']) || !is_array($data) || empty($data)) return;
 
-        // var_dump($data);
+        // Validate that data is an array and index 0 exists
+        if (!is_array($data) || empty($data) || !isset($data[0]) || !is_array($data[0])) {
+            return;
+        }
 
         $first_title = esc_html($data[0]['title'] ?? 'Notifications');
-       
-        
-        $html = '';
-        $html .='<div class="boomdevs-notification-wrapper notice notice-info is-dismissible boomdevs-notification-widget" data-plugin-slug="' . esc_attr($this->plugin_slug) . '">';
-            // $html .='<div class="notice notice-info is-dismissible boomdevs-notification-widget">';
-                $html .='<h3>' . $first_title . '</h3>';
-                $html .= $data[0]['content'];
-               
-        $html .='</div>';
-        
-        echo $html;
+        $html = '<div class="boomdevs-notification-wrapper notice notice-info is-dismissible boomdevs-notification-widget" data-plugin-slug="' . esc_attr($this->plugin_slug) . '">';
+        $html .= '<h3>' . $first_title . '</h3>';
+        $html .= $data[0]['content'] ?? '';
+        $html .= '</div>';
 
+        echo $html;
     }
+
 
   public function enqueue_scripts() {
     // Notification data 

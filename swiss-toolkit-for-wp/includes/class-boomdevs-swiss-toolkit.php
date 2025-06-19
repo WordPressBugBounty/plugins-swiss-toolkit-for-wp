@@ -67,7 +67,7 @@ if (!class_exists('BDSTFW_Swiss_Toolkit')) {
 			if (defined('BDSTFW_SWISS_TOOLKIT_VERSION')) {
 				$this->version = BDSTFW_SWISS_TOOLKIT_VERSION;
 			} else {
-				$this->version = '1.4.1';
+				$this->version = '1.4.2';
 			}
 			$this->plugin_name = 'swiss-toolkit-for-wp';
 

@@ -16,7 +16,7 @@
  * Plugin Name:       Swiss Toolkit For WP
  * Plugin URI:        https://wpmessiah.com
  * Description:       Say Goodbye to Plugin Overload - WP Swiss Toolkit Has It All
- * Version:           1.4.1
+ * Version:           1.4.2
  * Requires at least: 5.2
  * Requires PHP:      7.4
  * Author:            WP Messiah
@@ -37,7 +37,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('BDSTFW_SWISS_TOOLKIT_VERSION', '1.4.1');
+define('BDSTFW_SWISS_TOOLKIT_VERSION', '1.4.2');
 define('BDSTFW_SWISS_TOOLKIT_PATH', plugin_dir_path(__FILE__));
 define('BDSTFW_SWISS_TOOLKIT_URL', plugin_dir_url(__FILE__));
 define('BDSTFW_SWISS_TOOLKIT_NAME', 'swiss-toolkit-for-wp');

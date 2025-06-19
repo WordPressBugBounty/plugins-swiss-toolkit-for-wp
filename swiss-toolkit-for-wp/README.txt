@@ -4,7 +4,7 @@ Contributors: boomdevs, wpmessiah
 Tags: toolkit, increase file size limit, increase upload limit, upload limit
 Requires at least: 5.2
 Tested up to: 6.8
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -129,6 +129,9 @@ There are no prerequisites for installing **Swiss Toolkit**. You can follow the 
 
  == Changelog ==
 
+= 1.4.2 - 19 June 2025 =
+Fix: Handled missing notification data to prevent PHP warnings.
+
 = 1.4.1 - 11 June 2025 =
 Fix: admin panel loading issues
 
@@ -147,10 +150,8 @@ Added: integrated SureCart plugin support
  = 1.0.9 =
 Fixed a vulnerability and security issue related to post editing permissions.
 
-
 = 1.0.8 =
 Fixed a vulnerability and security issue related to unauthorized access.
-
 
 = 1.0.7 =
 New: WP Admin Login URL Changer

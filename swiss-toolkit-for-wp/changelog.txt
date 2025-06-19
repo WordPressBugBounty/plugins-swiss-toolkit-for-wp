@@ -1,5 +1,8 @@
  == Changelog ==
 
+ = 1.4.2 - 19 June 2025 =
+Fix: Handled missing notification data to prevent PHP warnings.
+
 = 1.4.1 - 11 June 2025 =
 Fix: Admin panel loading issues
  

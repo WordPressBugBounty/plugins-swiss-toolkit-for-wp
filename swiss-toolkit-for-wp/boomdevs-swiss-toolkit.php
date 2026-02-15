@@ -43,7 +43,7 @@ define('BDSTFW_SWISS_TOOLKIT_URL', plugin_dir_url(__FILE__));
 define('BDSTFW_SWISS_TOOLKIT_NAME', 'swiss-toolkit-for-wp');
 define('BDSTFW_SWISS_TOOLKIT_FULL_NAME', 'Swiss Toolkit');
 define('BDSTFW_SWISS_TOOLKIT_BASE_NAME', plugin_basename(__FILE__));
-define( 'DSTFW_SWISS_BACKEND_URL', 'https://plugins.boomdevs.net/wp-json/notification-api/v1/get');
+define( 'DSTFW_SWISS_BACKEND_URL', 'https://wpmessiah.com/wp-json/notification-api/v1/get');
 
 require __DIR__ . '/vendor/autoload.php';
 

@@ -1,6 +1,6 @@
 === Swiss Toolkit For WP ===
 Plugin Name: Swiss Toolkit For WP
-Contributors: boomdevs, wpmessiah
+Contributors: wpmessiah
 Tags: toolkit, increase file size limit, increase upload limit, upload limit
 Requires at least: 5.2
 Tested up to: 6.8
